@@ -8,7 +8,7 @@ import (
 
 func main() {
 	if len(os.Args) < 3 { // 실행 인수의 개수 확인
-		fmt.Println("2개 이상의 실행 인수가 필요합니다. ex) ./find_word word filepath")
+		fmt.Println("2개 이상의 실행 인수가 필요합니다. ex) ./find word filepath")
 		return
 	}
 
