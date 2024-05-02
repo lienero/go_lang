@@ -30,8 +30,8 @@ func MakeWebHandler() http.Handler {
 	mux.Handle("/", http.FileServer(http.Dir("public")))
 	mux.HandleFunc("/todos", GetTodoListHandler).Methods("GET")
 	mux.HandleFunc("/todos", PostTodoHandler).Methods("POST")
-	mux.HandleFunc("/todos/{id:[0*9]+}", RemoveTodoHandler).Methods("DELETE")
-	mux.HandleFunc("/todos/{id:[0*9]+}", UpdateTodoHandler).Methods("PUT")
+	mux.HandleFunc("/todos/{id:[0-9]+}", RemoveTodoHandler).Methods("DELETE")
+	mux.HandleFunc("/todos/{id:[0-9]+}", UpdateTodoHandler).Methods("PUT")
 	return mux
 }
 
